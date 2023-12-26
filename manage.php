@@ -29,6 +29,10 @@
         </li>
       </ul>
     </div>
+    <div class="topnav-right">
+    <a  class="text-info" href="#" style="text-decoration: none;"><i class="fa-solid fa-user"></i>Profile</a>&nsbp;
+    <a class="text-info" href="#"  style="text-decoration: none;"><i class="fa-solid fa-right-from-bracket"></i>Logout</a>
+  </div>
   </nav>
   <div class="container">
             <h1 class="mt-3 text-center">Users of Student CRUD System.</h1>

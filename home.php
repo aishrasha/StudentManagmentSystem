@@ -1,5 +1,6 @@
 <!--<p>welcome user</p>-->
 
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -60,7 +61,7 @@
                             echo "<tr>";
 						        echo "<td>" . $row['id'] . "</td>";
 						        echo "<td>" . $row['email'] . "</td>";
-						        //echo "<td>" . $row['role'] . "</td>";
+						        echo "<td>" . 'user' . "</td>";
 						    echo "<tr>";
                         }
                     echo "</tbody>";                            

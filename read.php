@@ -1,5 +1,5 @@
 <?php
-$id = $name = $class= $section = $country = $state = //$city ;
+$id = $name = $class= $section = $country = $state = $city = $image='' ;
 $id = $_GET['id'];
 include 'db.php';
 $sql = "select * from users where id='$id';";
@@ -7,9 +7,10 @@ $res = mysqli_query($con, $sql);
 $data = mysqli_fetch_array($res);
 
 $name = $data['name'];
-//$country = $data['country'];
-//$state = $data['state'];
-//$city = $data['city'];
+$country = 'null';
+$state = 'null';
+$city = 'null';
+$image = 'userimage';
 
 
 ?>
@@ -52,7 +53,7 @@ $name = $data['name'];
     <a class="text-info" href="#"  style="text-decoration: none;"><i class="fa-solid fa-right-from-bracket"></i>Logout</a>
   </div>
   </nav>
-  <div class="container">
+  <div class="container p-3">
             <h1 class="mt-3">Details</h1>
            
           <table class="table table-bordered table-stripped">
@@ -63,6 +64,7 @@ $name = $data['name'];
                             <td>Country</td>
                             <td>State</td>
                             <td>City</td>
+                            <td>Image</td>
                            
                         </tr>    
                     </thead>
@@ -70,14 +72,16 @@ $name = $data['name'];
                         <tr>
                             <td><?php echo $id;?></td>
                             <td><?php echo $name;?></td>
-                            <td><?php echo ''?></td>
-                            <td><?php echo ''?></td>
-                            <td><?php echo ''?></td>
+                            <td><?php echo $country;?></td>
+                            <td><?php echo $state;?></td>
+                            <td><?php echo $city;?></td>
+                            <td><img src="<?php echo $image?>"></td>
                         </tr>
                     </tbody>
                 </table>
+                
                 </div>
-               
+                
 
          
     
